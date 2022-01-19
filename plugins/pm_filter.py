@@ -844,13 +844,13 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"Here is what i found for your query {search}"
     if imdb and imdb.get('poster'):
         try:
-        message1 = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn)
+ message1 = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn)
         await asyncio.sleep(1200)
         await message1.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-        message1 = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn)
+ message1 = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn)
         await asyncio.sleep(1200)
         await message1.delete()
         except Exception as e:
